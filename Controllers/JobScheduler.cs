@@ -7,11 +7,11 @@ namespace jobscheduler.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class JobController : ControllerBase
+    public class JobScheduler : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public JobController(IConfiguration iConfig)
+        public JobScheduler(IConfiguration iConfig)
         {
             _configuration = iConfig;
         }

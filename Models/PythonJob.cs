@@ -10,12 +10,11 @@ public class PythonJob
     public PythonJob(IConfiguration configuration)
     {
         _configuration = configuration;
-        string hangfire = _configuration.GetSection("Hangfire").Value;
     }
 
     public static void RunPythonScript()
     {           
-        string pythonExePath = "path/to/python.exe";
+        string pythonExePath = _configuration.GetSection("pythonPath").Value; ;
         string scriptPath = "path/to/script.py";
 
         // Create a process to run the Python script
